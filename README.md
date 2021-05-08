@@ -19,7 +19,7 @@ host: "{host}",
 dialect: "mysql"
 ```
 
-Execute o comando:
+Para executar as migrations e criar a tabela dentro do banco de dados, execute o comando:
 
 ```yarn sequelize-cli db:migrate```
 
