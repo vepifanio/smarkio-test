@@ -23,6 +23,7 @@ ou
 Na pasta raiz, crie um arquivo .env e coloque as informações da apikey e serviceUrl do IBM Cloud do serviço Text to Speech da seguinte forma:
 
 API_KEY=sua_api_key
+
 SERVICE_URL=seu_service_url
 
 Para rodar a aplicação, execute:
