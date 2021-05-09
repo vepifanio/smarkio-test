@@ -1,4 +1,5 @@
 const commentsList = document.querySelector(".comments-list");
+const loadingDiv = document.querySelector(".loading");
 
 const xhttp = new XMLHttpRequest();
 
@@ -16,7 +17,7 @@ function createCommentsList(comments) {
     listenButton.classList.add("btn", "listen");
     
     listenButton.addEventListener("click", (e) => {
-
+      loadingDiv.style.visibility = "visible";
       xhttp.open("GET", `http://localhost:3333/comments/${comment.id}`);
       
       xhttp.send();
@@ -36,6 +37,7 @@ function createCommentsList(comments) {
           audioTag.appendChild(sourceTag);
           listItem.appendChild(audioTag);
 
+          loadingDiv.style.visibility = "hidden";
           audioTag.play();
         }
       }
