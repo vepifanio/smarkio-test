@@ -7,6 +7,8 @@ function createCommentsList(comments) {
     const listItem = document.createElement("li");
     const paragraph = document.createElement("p");
     const listenButton = document.createElement("button");
+    const audioTag = document.createElement("audio");
+    const sourceTag = document.createElement("source");
 
     paragraph.innerHTML = comment.text;
 
@@ -27,9 +29,6 @@ function createCommentsList(comments) {
           if (!fileServed) {
             return alert("Something went wrong");
           }
-
-          const audioTag = document.createElement("audio");
-          const sourceTag = document.createElement("source");
 
           sourceTag.setAttribute("src", fileServed);
           sourceTag.setAttribute("type", "audio/mpeg");
